@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/javascript.js" defer></script>
+    <title>DeBurgerzaak</title>
+</head>
+
+<body>
+    <main>
+        <div id="beginscherm">
+            <article>
+                <h1>Welkom bij de burger shop!</h1>
+                <p>Maak de juiste burger. Je krijgt 3 levens, dus wees voorzichtig.</p>
+                <p>Klik op start om te beginnen!</p>
+                <button id="start-button" onclick="startGame()">START</button>
+            </article>
+        </div>
+
+        <div id="midspel" class="hidden">
+            <div id="lives-container"></div>
+            <article>
+                <div id="order-container"></div>
+
+                <div id="burger-build"></div>
+
+                <div id="ingredients">
+                    <button onclick="addIngredient('lettuce')">
+                        <img src="images/lettuce.png" alt="lettuce">
+                    </button>
+                    <button onclick="addIngredient('tomato')">
+                        <img src="images/tomato.png" alt="tomato">
+                    </button>
+                    <button onclick="addIngredient('patty')">
+                        <img src="images/patty.png" alt="patty">
+                    </button>
+                    <button onclick="addIngredient('bottom')">
+                        <img src="images/bottom.png" alt="bottom">
+                    </button>
+                    <button onclick="addIngredient('top')">
+                        <img src="images/top.png" alt="top">
+                    </button>
+                </div>
+            </article>
+
+            <div id="finish">
+                <button onclick="deleteOrder()">Weg gooien</button>
+                <button onclick="checkOrder()">Klaar!</button>
+            </div>
+        </div>
+    <audio id="bg-music" src="cartoon-189231.mp3" loop></audio>
+    </main>
+</body>
+
+</html>
