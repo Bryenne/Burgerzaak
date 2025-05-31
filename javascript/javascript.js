@@ -26,7 +26,6 @@ function updateLivesDisplay() {
     const img = document.createElement('img');
     img.src = '../images/life_heart.png'
     img.alt = 'Life'
-    img.classList.add('life_heart')
     container.appendChild(img);
   }
 }
@@ -69,7 +68,7 @@ function checkOrder() {
     lives--;
     updateLivesDisplay();
 
-    if (lives <= 0) {
+    if (lives == 0) {
       alert("Game Over! Je hebt geen levens meer. Je wordt terug verwezen naar de startpagina :(");
       location.reload();
       return;
